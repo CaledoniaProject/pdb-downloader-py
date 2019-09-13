@@ -12,7 +12,7 @@ import struct
 # http://msdl.microsoft.com/download/symbols/notepad.pdb/A976171302F1449EA6B676E127B7434D2/notepad.pdb
 
 def to_pdb(filename):
-	return re.sub(r'.exe$', '.pdb', os.path.basename(filename))
+	return re.sub(r'.[^.]+$', '.pdb', os.path.basename(filename))
 
 def build_url(filename):
 	guid = ""
