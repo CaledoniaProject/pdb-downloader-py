@@ -8,6 +8,7 @@ import binascii
 import pefile
 import struct
 
+# 下载地址
 # http://msdl.microsoft.com/download/symbols/notepad.pdb/A976171302F1449EA6B676E127B7434D2/notepad.pdb
 
 def to_pdb(filename):
@@ -32,7 +33,6 @@ def build_url(filename):
 
 			break
 
-	# http://msdl.microsoft.com/download/symbols/notepad.pdb/A976171302F1449EA6B676E127B7434D2/notepad.pdb
 	return 'http://msdl.microsoft.com/download/symbols/%s/%s/%s' % (pdb, guid, pdb)
 
 def main():
