@@ -17,7 +17,7 @@ def to_pdb(filename):
 def build_url(filename):
 	guid = ""
 	pdb  = to_pdb(filename)
-	pe   = pefile.PE("notepad.exe")
+	pe   = pefile.PE(filename)
 
 	for dbg in pe.DIRECTORY_ENTRY_DEBUG:
 		# IMAGE_DEBUG_TYPE_CODEVIEW
